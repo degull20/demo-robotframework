@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230222 11:09:12.765" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Rbot Lowpass Filter 1" source="/home/harrington/designProject2020/robot-framework/test_robot_exam_1/test_rbot_lowpass_filter_1.robot">
+<test id="s1-t1" name="Test Case 1" line="14">
+<kw name="Calculate">
+<arg>30</arg>
+<arg>0.5</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${cutoff}</var>
+<arg>${resistor} / ${capacitor}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230222 11:09:12.836" level="INFO">${cutoff} = 60.0</msg>
+<status status="PASS" starttime="20230222 11:09:12.835" endtime="20230222 11:09:12.836"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${cutoff}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230222 11:09:12.838" level="INFO">${cutoff} = 60.0</msg>
+<status status="PASS" starttime="20230222 11:09:12.837" endtime="20230222 11:09:12.838"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cutoff}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230222 11:09:12.838" level="INFO">60.0</msg>
+<status status="PASS" starttime="20230222 11:09:12.838" endtime="20230222 11:09:12.839"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>The sum of ${resistor} and ${capacitor} is ${cutoff}.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230222 11:09:12.841" level="INFO">The sum of 30 and 0.5 is 60.0.</msg>
+<status status="PASS" starttime="20230222 11:09:12.839" endtime="20230222 11:09:12.841"/>
+</kw>
+<status status="PASS" starttime="20230222 11:09:12.834" endtime="20230222 11:09:12.842"/>
+</kw>
+<doc>Verify cutoff frequencies calculation</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230222 11:09:12.832" endtime="20230222 11:09:12.842"/>
+</test>
+<test id="s1-t2" name="Test OutPut_Input_Gain" line="19">
+<kw name="Set Variable" library="BuiltIn">
+<var>${output}</var>
+<arg>60</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230222 11:09:12.844" level="INFO">${output} = 60</msg>
+<status status="PASS" starttime="20230222 11:09:12.844" endtime="20230222 11:09:12.844"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${output} and ${cutoff}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230222 11:09:12.845" endtime="20230222 11:09:12.846"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>The input ${output} is less than ${cutoff}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230222 11:09:12.847" level="INFO">The input 60 is less than 60.0</msg>
+<status status="PASS" starttime="20230222 11:09:12.846" endtime="20230222 11:09:12.847"/>
+</kw>
+<status status="PASS" starttime="20230222 11:09:12.843" endtime="20230222 11:09:12.848"/>
+</test>
+<test id="s1-t3" name="Test Resi_Cap_Values" line="25">
+<kw name="Set Variable" library="BuiltIn">
+<var>${resistor}</var>
+<arg>40</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230222 11:09:12.852" level="INFO">${resistor} = 40</msg>
+<status status="PASS" starttime="20230222 11:09:12.851" endtime="20230222 11:09:12.852"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${resistor}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230222 11:09:12.853" level="INFO">${resistor} = 40</msg>
+<status status="PASS" starttime="20230222 11:09:12.852" endtime="20230222 11:09:12.853"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${capacitor}</var>
+<arg>70</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230222 11:09:12.854" level="INFO">${capacitor} = 70</msg>
+<status status="PASS" starttime="20230222 11:09:12.854" endtime="20230222 11:09:12.854"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${capacitor}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230222 11:09:12.856" level="INFO">${capacitor} = 70</msg>
+<status status="PASS" starttime="20230222 11:09:12.855" endtime="20230222 11:09:12.856"/>
+</kw>
+<doc>Cal new resis and cap gain changes</doc>
+<status status="PASS" starttime="20230222 11:09:12.849" endtime="20230222 11:09:12.856"/>
+</test>
+<test id="s1-t4" name="Test Circuit_Values" line="34">
+<kw name="Set Variable" library="BuiltIn">
+<var>${new_resistor}</var>
+<arg>500</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230222 11:09:12.859" level="INFO">${new_resistor} = 500</msg>
+<status status="PASS" starttime="20230222 11:09:12.858" endtime="20230222 11:09:12.859"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${new_capacitor}</var>
+<arg>0.5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230222 11:09:12.860" level="INFO">${new_capacitor} = 0.5</msg>
+<status status="PASS" starttime="20230222 11:09:12.859" endtime="20230222 11:09:12.860"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${new_cutoff}</var>
+<arg>60</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230222 11:09:12.862" level="INFO">${new_cutoff} = 60</msg>
+<status status="PASS" starttime="20230222 11:09:12.861" endtime="20230222 11:09:12.863"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${new_resistor}</arg>
+<arg>&gt;</arg>
+<arg>and ${resistor}</arg>
+<arg>Log new_resistor value greater than resistor value</arg>
+<arg>Else If</arg>
+<arg>${resistor} &lt; ${new_resistor}</arg>
+<arg>Log resistor value less than new_resistor</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="&gt;">
+<arg>and ${resistor}</arg>
+<arg>Log new_resistor value greater than resistor value</arg>
+<arg>Else If</arg>
+<arg>${resistor} &lt; ${new_resistor}</arg>
+<arg>Log resistor value less than new_resistor</arg>
+<msg timestamp="20230222 11:09:12.868" level="FAIL">No keyword with name '&gt;' found.</msg>
+<status status="FAIL" starttime="20230222 11:09:12.867" endtime="20230222 11:09:12.868"/>
+</kw>
+<status status="FAIL" starttime="20230222 11:09:12.863" endtime="20230222 11:09:12.868"/>
+</kw>
+<status status="FAIL" starttime="20230222 11:09:12.857" endtime="20230222 11:09:12.869">No keyword with name '&gt;' found.</status>
+</test>
+<doc>Example test case for cutoff frequencies keywords</doc>
+<status status="FAIL" starttime="20230222 11:09:12.767" endtime="20230222 11:09:12.871"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Test Rbot Lowpass Filter 1">Test Rbot Lowpass Filter 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
