@@ -37,5 +37,6 @@ Test Circuit_Values
      ${new_capacitor}   Set Variable  0.5
      ${new_cutoff}      Set variable   60
 
-     Run Keyword If   ${new_resistor}  >  and ${resistor}  Log new_resistor value greater than resistor value
+     Run Keyword If   ${new_resistor}  >  and ${resistogot another replies  
+     r}  Log new_resistor value greater than resistor value
      ...    Else If   ${resistor} < ${new_resistor}  Log resistor value less than new_resistor  
