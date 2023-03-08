@@ -11,7 +11,7 @@ Calculate cutoff frequency
 
     Given Resistor Value Is   1
     And Capacitor Value Is  1500
-    When calculating cutoff frequency  25  100  2   
+    When calculating cutoff frequency  25  100  3.14   
     Cutoff Frequency Should Be Approximately  300
     
 *** Keywords ***
@@ -25,8 +25,8 @@ And Capacitor Value Is
 
 When calculating cutoff frequency 
     [Arguments]  ${R}  ${C}  ${const}
-    ${cutoff_frequency}  evaluate  ${const}>${C}-${R} 
-
+    ${cutoff_frequency}  evaluate  1.0 / ${const}*${C}-${R}* 2.0 
+    
 Cutoff Frequency Should Be Approximately  
     [Arguments]  ${expected_cutoff_frequency} 
     Should Be True  ${expected_cutoff_frequency}-1-${C} < ${expected_cutoff_frequency}+1
