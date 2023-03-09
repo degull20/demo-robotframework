@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230307 16:57:57.091" rpa="false" schemaversion="3">
-<suite id="s1" name="Test Robot Suite Example" source="/home/harrington/designProject2020/robot-framework/test_robot_exam_1/test_robot_suite_example.robot">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230307 17:42:10.807" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Robot Suite Example" source="C:\Users\harrington\project2020\demo-robotframework\test_robot_suite_example.robot">
 <test id="s1-t1" name="Calculate cutoff frequency" line="7">
 <kw name="Given Resistor Value Is">
 <arg>100</arg>
@@ -8,10 +8,10 @@
 <arg>${R}</arg>
 <arg>${resistor_value}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20230307 16:57:57.358" level="INFO">${R} = 100</msg>
-<status status="PASS" starttime="20230307 16:57:57.349" endtime="20230307 16:57:57.359"/>
+<msg timestamp="20230307 17:42:10.887" level="INFO">${R} = 100</msg>
+<status status="PASS" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
-<status status="PASS" starttime="20230307 16:57:57.347" endtime="20230307 16:57:57.360"/>
+<status status="PASS" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
 <kw name="And Capacitor Value Is">
 <arg>1uF</arg>
@@ -19,10 +19,10 @@
 <arg>${C}</arg>
 <arg>${capacitor_value}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20230307 16:57:57.368" level="INFO">${C} = 1uF</msg>
-<status status="PASS" starttime="20230307 16:57:57.364" endtime="20230307 16:57:57.369"/>
+<msg timestamp="20230307 17:42:10.887" level="INFO">${C} = 1uF</msg>
+<status status="PASS" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
-<status status="PASS" starttime="20230307 16:57:57.361" endtime="20230307 16:57:57.369"/>
+<status status="PASS" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
 <kw name="When calculating cutoff frequency">
 <kw name="Divide">
@@ -34,25 +34,25 @@
 <arg>pi</arg>
 <arg>${R}</arg>
 <arg>${C}</arg>
-<msg timestamp="20230307 16:57:57.390" level="FAIL">No keyword with name 'Divide' found.</msg>
-<status status="FAIL" starttime="20230307 16:57:57.390" endtime="20230307 16:57:57.391"/>
+<msg timestamp="20230307 17:42:10.887" level="FAIL">No keyword with name 'Divide' found.</msg>
+<status status="FAIL" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${Fc}</arg>
 <arg>${cutoff_frequency}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="NOT RUN" starttime="20230307 16:57:57.392" endtime="20230307 16:57:57.392"/>
+<status status="NOT RUN" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
-<status status="FAIL" starttime="20230307 16:57:57.370" endtime="20230307 16:57:57.393"/>
+<status status="FAIL" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
 <kw name="Then cutoff frequency Divide should be approximately 1591.55 Hz">
-<status status="NOT RUN" starttime="20230307 16:57:57.408" endtime="20230307 16:57:57.408"/>
+<status status="NOT RUN" starttime="20230307 17:42:10.887" endtime="20230307 17:42:10.887"/>
 </kw>
 <doc>Verify that the cutoff frequency of the low pass filter is calculated correctly.</doc>
 <tag>low_pass_filter</tag>
-<status status="FAIL" starttime="20230307 16:57:57.344" endtime="20230307 16:57:57.409">No keyword with name 'Divide' found.</status>
+<status status="FAIL" starttime="20230307 17:42:10.885" endtime="20230307 17:42:10.903">No keyword with name 'Divide' found.</status>
 </test>
-<status status="FAIL" starttime="20230307 16:57:57.097" endtime="20230307 16:57:57.412"/>
+<status status="FAIL" starttime="20230307 17:42:10.807" endtime="20230307 17:42:10.951"/>
 </suite>
 <statistics>
 <total>
