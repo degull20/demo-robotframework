@@ -1,5 +1,5 @@
 - job:
-    name: hello-world
+    name: my-job
     project-type: freestyle
     description: A simple hello world job
     steps:
