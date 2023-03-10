@@ -1,20 +1,22 @@
 - job:
-    name: my-job
+    name: my-robot-test-job
     project-type: freestyle
-    description: My Jenkins job
+    description: My Robot Test Job
     disabled: false
     scm:
       - git:
           url: https://github.com/my-repo/my-project.git
           branches:
             - master
-          skip-tag: true
     triggers:
       - pollscm:
           cron: "H/5 * * * *"
     builders:
-      - shell: |
-          echo "Hello, World!"
+      - robot:
+          requireartifacts: false
+          installation: "Robot Framework"
+          runcmd: |
+            robot --outputdir robot-results my-test-suite.robot
     publishers:
       - junit:
-          test-results: "**/test-results/*.xml"
+          test-results: "**/robot-results/*.xml"
