@@ -5,13 +5,13 @@
     disabled: false
     scm:
       - git:
-          url: https://github.com/my-repo/my-project.git
+          url: https://github.com/degull20/demo-robotframework.git
           branches:
-            - master
+            - main
           skip-tag: true
     triggers:
       - pollscm:
-          cron: "H/5 * * * *"
+          cron: "H/2 * * * *"
     builders:
       - shell: |
           echo "Hello, World!"
