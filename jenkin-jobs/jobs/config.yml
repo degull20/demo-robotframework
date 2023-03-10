@@ -1,3 +1,4 @@
+
 - job:
     name: my-robot-test-job
     project-type: freestyle
@@ -12,11 +13,11 @@
       - pollscm:
           cron: "H/5 * * * *"
     builders:
-      - robot:
-          requireartifacts: false
-          installation: "Robot Framework"
-          runcmd: |
-            robot --outputdir robot-results my-test-suite.robot
+      - shell: |
+          pip install -U robotframework
+          for file in tests/*.robot; do
+            robot --outputdir robot-results "$file"
+          done
     publishers:
       - junit:
           test-results: "**/robot-results/*.xml"
