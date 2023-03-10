@@ -1,8 +1,20 @@
 - job:
     name: my-job
     project-type: freestyle
-    description: A simple hello world job
-    steps:
+    description: My Jenkins job
+    disabled: false
+    scm:
+      - git:
+          url: https://github.com/my-repo/my-project.git
+          branches:
+            - master
+          skip-tag: true
+    triggers:
+      - pollscm:
+          cron: "H/5 * * * *"
+    builders:
       - shell: |
-          echo "Hello World!"
-
+          echo "Hello, World!"
+    publishers:
+      - junit:
+          test-results: "**/test-results/*.xml"
