@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # Set the path to the Robot Framework script you want to run
-ROBOT_SCRIPT_PATH = "WORKSPACE/runny.py"
+ROBOT_SCRIPT_PATH = "/var/lib/jenkins/workspace/test_robot_Script_jobs/runny.py"
 
 # Set the path to the output file for the Robot Framework results
 ROBOT_OUTPUT_PATH = "WORKSPACE/output.xml"
