@@ -5,7 +5,7 @@ import subprocess
 ROBOT_SCRIPT_PATH = "/var/lib/jenkins/workspace/test_robot_Script_jobs/runny.py"
 
 # Set the path to the output file for the Robot Framework results
-ROBOT_OUTPUT_PATH = "WORKSPACE/output.xml"
+ROBOT_OUTPUT_PATH = "/var/lib/jenkins/workspace/test_robot_Script_jobs/output.xml"
 
 # Set any additional Robot Framework command line options
 ROBOT_OPTIONS = "--variable ENV:prod"
