@@ -1,5 +1,6 @@
 import os
 import subprocess
+import robot
 
 # Set the path to the Robot Framework script you want to run
 ROBOT_SCRIPT_PATH = "/var/lib/jenkins/workspace/test_robot_Script_jobs/runny.py"
